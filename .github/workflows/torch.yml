@@ -18,8 +18,8 @@ jobs:
         run: |
           # this is to fix GIT not liking owner of the checkout dir
           chown -R $(id -u):$(id -g) $PWD
-      - name: cd /cre/python/
-        run: (cd /cre/python/)
+      - name: cd /cre/python/3.5.2023/
+        run: (cd /cre/python/3.5.2023)
       - name: ls -l
         run: (ls -l)
       - name: Install pytorch
