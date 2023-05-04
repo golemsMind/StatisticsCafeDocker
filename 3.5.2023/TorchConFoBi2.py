@@ -123,7 +123,7 @@ for epoch in range(epochs):
     axs[2, 1].plot(y_test, m_test[0] * y_test + b_test, 'r')
     axs[2, 1].set_title('Regression Test')
     if epoch == (epochs - 1):
-        plt.savefig('results_torch.png')
+        plt.savefig('results_torch2.png')
     #plt.show()
     #time.sleep(1)
     plt.close(fig)
