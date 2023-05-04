@@ -23,7 +23,7 @@ jobs:
       - name: ls -l
         run: (ls -l)
       - name: Install pytorch
-        run: (pip3 install pytorch)
+        run: (pip3 install torch)
       - name: Run TorchConFoBi
         run: (python3 TorchConFoBi.py)
       - name: Submit changes       
