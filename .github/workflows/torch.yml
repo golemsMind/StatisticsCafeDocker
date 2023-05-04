@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: manually:0.0
+name: pytorch:0.0
 
 on:
   workflow_dispatch:
@@ -18,6 +18,9 @@ jobs:
         run: |
           # this is to fix GIT not liking owner of the checkout dir
           chown -R $(id -u):$(id -g) $PWD
+      - name: cd /cre/python/
+        run: (cd /cre/python/)
+      - name: Run TorchConFoBi
         run: (python3 TorchConFoBi.py)
       - name: Submit changes       
         uses: EndBug/add-and-commit@v9
