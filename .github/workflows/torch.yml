@@ -18,14 +18,16 @@ jobs:
         run: |
           # this is to fix GIT not liking owner of the checkout dir
           chown -R $(id -u):$(id -g) $PWD
-      - name: cd /cre/python/3.5.2023/
-        run: (cd /cre/python/3.5.2023)
+      - name: cd pwd
+        run: (pwd)
+      - name: cd /cre/python/
+        run: (cd /cre/python)
       - name: ls -l
         run: (ls -l)
       - name: Install pytorch
         run: (pip3 install torch)
       - name: Run TorchConFoBi
-        run: (python3 TorchConFoBi.py)
+        run: (python3 ./3.5.2023/TorchConFoBi.py)
       - name: Submit changes       
         uses: EndBug/add-and-commit@v9
         with:
