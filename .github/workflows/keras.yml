@@ -22,8 +22,8 @@ jobs:
         run: (pwd)
       - name: ls -l before
         run: (ls -l)
-      - name: cd /cre/python/
-        run: (cd /cre/python)
+      - name: cd /cre/python/3.5.2023/
+        run: (cd /cre/python/3.5.2023/)
       - name: ls -l after
         run: (ls -l)
 #      - name: Install pytorch
