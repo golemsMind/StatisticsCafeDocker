@@ -26,7 +26,7 @@ split_ratio = 0.8
 epochs = 100
 
 
-data = pd.read_csv('3.5.2023/Dataset.csv',header=None, delimiter=';')
+data = pd.read_csv('Dataset.csv',header=None, delimiter=';')
 data = np.array(data)
 
 
@@ -123,7 +123,7 @@ for epoch in range(epochs):
     axs[2, 1].plot(y_test, m_test[0] * y_test + b_test, 'r')
     axs[2, 1].set_title('Regression Test')
     if epoch == (epochs - 1):
-        plt.savefig('3.5.2023/results_torch.png')
+        plt.savefig('results_torch2.png')
     #plt.show()
     #time.sleep(1)
     plt.close(fig)

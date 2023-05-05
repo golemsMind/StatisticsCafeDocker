@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: pytorch:0.0
+name: keras:0.0
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ jobs:
     container:
       image: credocker/creml:2020.0
       volumes:
-        - ${{ github.workspace }}/3.5.2023:/cre/python
+        - ${{ github.workspace }}/3.5.2023/:/cre/python
     steps:
       - uses: actions/checkout@v3
       - name: Set ownership
@@ -20,14 +20,16 @@ jobs:
           chown -R $(id -u):$(id -g) $PWD
       - name: pwd
         run: (pwd)
-      - name: cd /cre/python/
+      - name: ls -l before
+        run: (ls -l)
+      - name: cd /cre/python
         run: (cd /cre/python)
-      - name: ls -l
+      - name: ls -l after
         run: (ls -l)
 #      - name: Install pytorch
 #        run: (pip3 install torch)
       - name: Run TorchConFoBi
-        run: (python3 ./3.5.2023/TorchConFoBi.py)
+        run: (cd ./3.5.2023/ && python3 ./TorchConFoBi.py)
       - name: Submit changes       
         uses: EndBug/add-and-commit@v9
         with:

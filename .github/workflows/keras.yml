@@ -29,10 +29,10 @@ jobs:
 #      - name: Install pytorch
 #        run: (pip3 install torch)
       - name: Run TorchConFoBi
-        run: (cd ./3.5.2023/ && python3 ./TorchConFoBi2.py)
+        run: (cd ./3.5.2023/ && python3 ./KerasConFoBi.py)
       - name: Submit changes       
         uses: EndBug/add-and-commit@v9
         with:
 #          pull: '--rebase --autostash ...'
-          add: '3.5.2023/results_torch2.png'
+          add: '3.5.2023/results_keras.png'
           tag_push: '--force'
