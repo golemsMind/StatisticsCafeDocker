@@ -145,9 +145,9 @@ for i in range(epochs):
     axs[2, 1].plot(y_test,m_test*y_test+b_test,'r')
     axs[2, 1].set_title('Regression Test')
     if i == (epochs - 1):
-        plt.savefig('Results.jpg')
-    plt.show()
-    time.sleep(1)
+        plt.savefig('results_manual.jpg')
+    #plt.show()
+    #time.sleep(1)
     plt.close(fig)
 
 
