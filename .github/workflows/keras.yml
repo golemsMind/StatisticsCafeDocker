@@ -11,7 +11,7 @@ jobs:
     container:
       image: credocker/creml:2020.0
       volumes:
-        - ${{ github.workspace }}/3.5.2023:/cre/python
+        - ${{ github.workspace }}/3.5.2023/:/cre/python
     steps:
       - uses: actions/checkout@v3
       - name: Set ownership
