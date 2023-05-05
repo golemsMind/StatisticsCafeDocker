@@ -1,11 +1,8 @@
-#import torch
-#import torch.nn as nn
-#import torch.nn.functional as f
-import tensorflow as tf
+import torch
+import torch.nn as nn
+import torch.nn.functional as f
 import numpy as np
 import pandas as pd
-from tensorflow import keras
-from tensorflow.keras import layers
 import matplotlib.pyplot as plt
 import time
 
